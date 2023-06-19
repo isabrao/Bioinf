@@ -7,12 +7,12 @@
 
 /* Estilos globais */
 body {
-  background-color: #f5f5dc;
-  color: black;
+  background-color: #f8f8f8;
+  color: #000000;
   font-family: 'Arial', sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Impact', sans-serif;
 }
 
@@ -29,45 +29,66 @@ a {
 
 /* Estilos do cabeçalho */
 header {
-  background-color: #f5f5dc;
+  background-color: #f8f8f8;
   padding: 20px;
   text-align: center;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
+nav {
+  text-align: right;
 }
 
-nav li {
-  margin: 0 10px;
-}
-
-nav a {
+.dropdown {
+  position: relative;
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff69b4;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
 }
 
-nav a:hover {
-  background-color: #ff6db6;
+.dropbtn {
+  background-color: transparent;
+  color: #000000;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f8f8f8;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: left;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ff69b4;
+  color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Estilos da seção de introdução */
 #inicio {
   text-align: center;
   padding: 40px 0;
+  background-color: #f8f8f8;
 }
 
-#inicio h1 {
+#inicio h2 {
   font-size: 48px;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -83,7 +104,7 @@ nav a:hover {
   display: inline-block;
   padding: 10px 20px;
   background-color: #ff69b4;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 20px;
   transition: background-color 0.3s ease;
@@ -94,13 +115,14 @@ nav a:hover {
   background-color: #ff6db6;
 }
 
-/* Estilos da seção de galeria */
-#galeria {
+/* Estilos da seção de imagens */
+#imagens {
   text-align: center;
   padding: 40px 0;
+  background-color: #f8f8f8;
 }
 
-#galeria h2 {
+#imagens h2 {
   font-size: 36px;
   margin-bottom: 40px;
 }
@@ -116,10 +138,15 @@ nav a:hover {
   border-radius: 20px;
 }
 
-/* Estilos da seção do grupo */
+.image {
+  position: relative;
+}
+
+/* Estilos da seção de grupo */
 #grupo {
   text-align: center;
   padding: 40px 0;
+  background-color: #f8f8f8;
 }
 
 #grupo h2 {
@@ -129,30 +156,29 @@ nav a:hover {
 
 .members {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .member {
+  margin: 0 20px;
   text-align: center;
-  margin: 20px;
 }
 
 .member img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 
 .member h3 {
-  margin: 0;
+  font-size: 18px;
 }
 
 /* Estilos do rodapé */
 footer {
-  text-align: center;
+  background-color: #f8f8f8;
   padding: 20px;
-  background-color: #f5f5dc;
-  color: #666;
- 
+  text-align: center;
+}
