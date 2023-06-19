@@ -34,13 +34,8 @@ header {
   text-align: center;
 }
 
-nav {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-nav a {
-  margin-right: 10px;
+header h1 {
+  color: #ff1493; /* Rosa escuro para o título do trabalho */
 }
 
 /* Estilos da seção de introdução */
@@ -90,7 +85,7 @@ nav a {
 }
 
 .image-caption {
-  background-color: #f8f0e3; /* Cor de fundo creme */
+  background-color: #fff;
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
@@ -105,16 +100,17 @@ nav a {
   font-size: 14px;
 }
 
-.description-text {
+.image-caption .description {
   display: none;
+  margin-top: 10px;
 }
 
 .expand-button {
   background-color: transparent;
   border: none;
-  cursor: pointer;
-  font-size: 16px;
   color: #ff69b4;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Estilos da seção de grupo */
