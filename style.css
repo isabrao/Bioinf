@@ -1,192 +1,188 @@
-/* Reset de estilos */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<style>
+  /* Reset de estilos */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-/* Estilos globais */
-body {
-  background-color: #f8f0e3; /* Cor de fundo creme */
-  color: #000000; /* Fonte preta */
-  font-family: 'Arial', sans-serif;
-}
+  /* Estilos globais */
+  body {
+    background-color: #f8f0e3; /* Cor de fundo creme */
+    color: #000000; /* Fonte preta */
+    font-family: 'Arial', sans-serif;
+  }
 
-h1, h2, h3, h4 {
-  font-family: 'Impact', sans-serif;
-}
+  h1, h2, h3, h4 {
+    font-family: 'Impact', sans-serif;
+  }
 
-a {
-  color: #000000; /* Fonte preta para os links */
-  text-decoration: none;
-}
+  a {
+    color: #000000; /* Fonte preta para os links */
+    text-decoration: none;
+  }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
 
-/* Estilos do cabeçalho */
-header {
-  background-color: #f8f0e3; /* Cor de fundo creme */
-  padding: 20px;
-  text-align: center;
-}
+  /* Estilos do cabeçalho */
+  header {
+    background-color: #f8f0e3; /* Cor de fundo creme */
+    padding: 20px;
+    text-align: center;
+  }
 
-header h1 {
-  font-size: 38px;
-  margin-bottom: 10px;
-  position: relative;
-}
+  header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
 
-header h1::after {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 1px;
-  background-color: #000000; /* Linha preta */
-  position: absolute;
-  bottom: -10px;
-  left: 25%;
-}
+  header h1::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: #000000; /* Linha preta */
+    position: absolute;
+    bottom: -10px;
+    left: 25%;
+  }
 
-/* Estilos das abas */
-nav {
-  background-color: #f8f0e3; /* Cor de fundo creme */
-  padding: 10px;
-  text-align: center;
-  margin-bottom: 20px;
-}
+  /* Estilos da seção de introdução */
+  #inicio {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f8f0e3; /* Cor de fundo creme */
+  }
 
-.tabs {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  #inicio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
 
-.tab {
-  background-color: #f8e8d3; /* Creme mais clarinho para os botões */
-  color: #000000; /* Fonte preta para os botões */
-  padding: 10px 20px;
-  margin: 0 5px;
-  border-radius: 5px;
-  cursor: pointer;
-}
+  #inicio p {
+    font-size: 18px;
+    font-weight: bold; /* Adicionado negrito ao texto da introdução */
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
 
-/* Estilos da seção de introdução */
-#inicio {
-  text-align: center;
-  padding: 40px 0;
-  background-color: #f8f0e3; /* Cor de fundo creme */
-}
+  /* Estilos da seção de imagens */
+  #imagens {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f8f0e3; /* Cor de fundo creme */
+  }
 
-#inicio h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
+  #imagens h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
 
-#inicio p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 40px;
-}
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
 
-/* Estilos da seção de imagens */
-#imagens {
-  text-align: center;
-  padding: 40px 0;
-  background-color: #f8f0e3; /* Cor de fundo creme */
-}
+  .image {
+    position: relative;
+  }
 
-#imagens h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
+  .image img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
+  .image:hover img {
+    transform: scale(1.05);
+  }
 
-.image {
-  position: relative;
-}
+  .image-caption {
+    background-color: #f8f8f8; /* Creme para as legendas das imagens */
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
 
-.image img {
-  width: 100%;
-  border-radius: 20px;
-}
+  .image:hover .image-caption {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-.image-caption {
-  background-color: #f8f8f8; /* Creme para as legendas das imagens */
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 10px;
-}
+  .image-caption h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
 
-.image-caption h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
+  .image-caption p {
+    font-size: 14px;
+  }
 
-.image-caption p {
-  font-size: 14px;
-}
+  .image-caption .description {
+    display: none;
+    margin-top: 10px;
+  }
 
-.image-caption .description {
-  display: none;
-  margin-top: 10px;
-}
+  .expand-button {
+    background-color: transparent;
+    border: none;
+    color: #000000; /* Fonte preta para o botão */
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
 
-.expand-button {
-  background-color: transparent;
-  border: none;
-  color: #000000; /* Fonte preta para o botão */
-  font-weight: bold;
-  cursor: pointer;
-}
+  .expand-button:hover {
+    transform: rotate(90deg);
+  }
 
-/* Estilos da seção de grupo */
-#grupo {
-  text-align: center;
-  padding: 40px 0;
-  background-color: #f8f0e3; /* Cor de fundo creme */
-}
+  /* Estilos da seção de grupo */
+  #grupo {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f8f0e3; /* Cor de fundo creme */
+  }
 
-#grupo h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
+  #grupo h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
 
-.members {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
+  .members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-.member {
-  margin: 0 20px;
-  text-align: center;
-}
+  .member {
+    margin: 0 20px;
+    text-align: center;
+  }
 
-.member img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
+  .member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
 
-.member h3 {
-  font-size: 18px;
-}
+  .member h3 {
+    font-size: 18px;
+  }
 
-/* Estilos do rodapé */
-footer {
-  background-color: #f8f0e3; /* Cor de fundo creme */
-  padding: 20px;
-  text-align: center;
-}
+  /* Estilos do rodapé */
+  footer {
+    background-color: #f8f0e3; /* Cor de fundo creme */
+    padding: 20px;
+    text-align: center;
+  }
+</style>
