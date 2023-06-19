@@ -57,7 +57,7 @@ header {
 #imagens {
   text-align: center;
   padding: 40px 0;
-  background-color: #f8f8f8;
+  background-color: #f8f0e3; /* Cor de fundo creme */
 }
 
 #imagens h2 {
@@ -81,7 +81,7 @@ header {
 }
 
 .image-caption {
-  background-color: #fff;
+  background-color: #f8f8f8;
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
@@ -100,7 +100,7 @@ header {
 #grupo {
   text-align: center;
   padding: 40px 0;
-  background-color: #f8f8f8;
+  background-color: #f8f0e3; /* Cor de fundo creme */
 }
 
 #grupo h2 {
@@ -112,11 +112,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .member {
   margin: 0 20px;
   text-align: center;
+  width: 50%;
 }
 
 .member img {
