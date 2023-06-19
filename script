@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apresentação de Imagens em Nível Celular | Análise Biológica de Dados</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#grupo">Grupo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <div class="container">
+        <h1>Apresentação de Imagens em Nível Celular</h1>
+        <p>Análise Biológica de Dados</p>
+        <a href="#galeria" class="button">Ver Galeria</a>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="container">
+        <h2>Galeria de Imagens</h2>
+        <div class="gallery">
+          <img src="imagem1.jpg" alt="Imagem 1">
+          <img src="imagem2.jpg" alt="Imagem 2">
+          <img src="imagem3.jpg" alt="Imagem 3">
+          <img src="imagem4.jpg" alt="Imagem 4">
+        </div>
+      </div>
+    </section>
+
+    <section id="grupo">
+      <div class="container">
+        <h2>Grupo</h2>
+        <div class="members">
+          <div class="member">
+            <img src="isadora.jpg" alt="Isadora">
+            <h3>Isadora</h3>
+          </div>
+          <div class="member">
+            <img src="iris.jpg" alt="Íris">
+            <h3>Íris</h3>
+          </div>
+          <div class="member">
+            <img src="camile.jpg" alt="Camile">
+            <h3>Camile</h3>
+          </div>
+          <div class="member">
+            <img src="livia.jpg" alt="Livia">
+            <h3>Livia</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Apresentação de Imagens em Nível Celular | Análise Biológica de Dados</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Lógica JavaScript aqui
+      // Exemplo: Manipulação do DOM ou eventos
+    });
+  </script>
+</body>
+
+</html>
