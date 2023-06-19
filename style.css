@@ -17,7 +17,7 @@ h1, h2, h3, h4 {
 }
 
 a {
-  color: #ff69b4;
+  color: #000000; /* Fonte preta para os links */
   text-decoration: none;
 }
 
@@ -29,18 +29,18 @@ a {
 
 /* Estilos do cabeçalho */
 header {
-  background-color: #f8f8f8;
+  background-color: #f8f0e3; /* Cor de fundo creme */
   padding: 20px;
   text-align: center;
 }
 
 header h1 {
-  color: #ff1493; /* Rosa escuro para o título do trabalho */
+  color: #000000; /* Fonte preta para o título do trabalho */
 }
 
 /* Estilos das abas */
 nav {
-  background-color: #f8f8f8;
+  background-color: #f8f0e3; /* Cor de fundo creme */
   padding: 10px;
   text-align: center;
 }
@@ -54,19 +54,25 @@ nav {
 }
 
 .tab {
-  background-color: #ff69b4; /* Rosa forte para os botões */
-  color: #ffffff; /* Texto branco para os botões */
+  background-color: #f8e8d3; /* Creme mais clarinho para os botões */
+  color: #000000; /* Fonte preta para os botões */
   padding: 10px 20px;
   margin: 0 5px;
   border-radius: 5px;
   cursor: pointer;
 }
 
+.separator {
+  border-top: 1px solid #000000; /* Linha preta */
+  margin: 20px auto;
+  max-width: 50%;
+}
+
 /* Estilos da seção de introdução */
 #inicio {
   text-align: center;
   padding: 40px 0;
-  background-color: #f8f8f8;
+  background-color: #f8f0e3; /* Cor de fundo creme */
 }
 
 #inicio h2 {
@@ -85,7 +91,7 @@ nav {
 #imagens {
   text-align: center;
   padding: 40px 0;
-  background-color: #f8f8f8;
+  background-color: #f8f0e3; /* Cor de fundo creme */
 }
 
 #imagens h2 {
@@ -132,7 +138,7 @@ nav {
 .expand-button {
   background-color: transparent;
   border: none;
-  color: #ff69b4;
+  color: #000000; /* Fonte preta para o botão */
   font-weight: bold;
   cursor: pointer;
 }
@@ -141,7 +147,7 @@ nav {
 #grupo {
   text-align: center;
   padding: 40px 0;
-  background-color: #f8f8f8;
+  background-color: #f8f0e3; /* Cor de fundo creme */
 }
 
 #grupo h2 {
@@ -150,12 +156,14 @@ nav {
 }
 
 .members {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .member {
+  margin: 0 20px;
   text-align: center;
 }
 
@@ -172,7 +180,7 @@ nav {
 
 /* Estilos do rodapé */
 footer {
-  background-color: #f8f8f8;
+  background-color: #f8f0e3; /* Cor de fundo creme */
   padding: 20px;
   text-align: center;
 }
