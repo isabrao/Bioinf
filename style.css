@@ -35,7 +35,20 @@ header {
 }
 
 header h1 {
-  color: #000000; /* Fonte preta para o título do trabalho */
+  font-size: 48px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+header h1::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: #000000; /* Linha preta */
+  position: absolute;
+  bottom: -10px;
+  left: 25%;
 }
 
 /* Estilos das abas */
@@ -43,6 +56,7 @@ nav {
   background-color: #f8f0e3; /* Cor de fundo creme */
   padding: 10px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .tabs {
@@ -50,7 +64,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .tab {
@@ -62,12 +75,6 @@ nav {
   cursor: pointer;
 }
 
-.separator {
-  border-top: 1px solid #000000; /* Linha preta */
-  margin: 20px auto;
-  max-width: 50%;
-}
-
 /* Estilos da seção de introdução */
 #inicio {
   text-align: center;
@@ -76,8 +83,7 @@ nav {
 }
 
 #inicio h2 {
-  font-size: 48px;
-  line-height: 1.2;
+  font-size: 36px;
   margin-bottom: 20px;
 }
 
