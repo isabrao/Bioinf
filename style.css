@@ -34,6 +34,15 @@ header {
   text-align: center;
 }
 
+nav {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+nav a {
+  margin-right: 10px;
+}
+
 /* Estilos da seção de introdução */
 #inicio {
   text-align: center;
@@ -57,7 +66,7 @@ header {
 #imagens {
   text-align: center;
   padding: 40px 0;
-  background-color: #f8f0e3; /* Cor de fundo creme */
+  background-color: #f8f8f8;
 }
 
 #imagens h2 {
@@ -81,7 +90,7 @@ header {
 }
 
 .image-caption {
-  background-color: #f8f8f8;
+  background-color: #f8f0e3; /* Cor de fundo creme */
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
@@ -96,11 +105,23 @@ header {
   font-size: 14px;
 }
 
+.description-text {
+  display: none;
+}
+
+.expand-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ff69b4;
+}
+
 /* Estilos da seção de grupo */
 #grupo {
   text-align: center;
   padding: 40px 0;
-  background-color: #f8f0e3; /* Cor de fundo creme */
+  background-color: #f8f8f8;
 }
 
 #grupo h2 {
@@ -112,13 +133,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .member {
   margin: 0 20px;
   text-align: center;
-  width: 50%;
 }
 
 .member img {
