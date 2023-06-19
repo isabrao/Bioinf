@@ -7,8 +7,8 @@
 
 /* Estilos globais */
 body {
-  background-color: #f8f8f8;
-  color: #000000;
+  background-color: #f8f0e3; /* Cor de fundo creme */
+  color: #000000; /* Fonte preta */
   font-family: 'Arial', sans-serif;
 }
 
@@ -34,53 +34,6 @@ header {
   text-align: center;
 }
 
-nav {
-  text-align: right;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  background-color: transparent;
-  color: #000000;
-  font-size: 24px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f8f8f8;
-  min-width: 160px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  z-index: 1;
-  text-align: left;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.dropdown-content a {
-  color: #000000;
-  padding: 10px;
-  text-decoration: none;
-  display: block;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-  background-color: #ff69b4;
-  color: #ffffff;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 /* Estilos da seção de introdução */
 #inicio {
   text-align: center;
@@ -98,21 +51,6 @@ nav {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 40px;
-}
-
-#inicio .button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff69b4;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-}
-
-#inicio .button:hover {
-  background-color: #ff6db6;
 }
 
 /* Estilos da seção de imagens */
@@ -133,22 +71,29 @@ nav {
   grid-gap: 20px;
 }
 
-.gallery img {
-  width: 100%;
-  border-radius: 20px;
-}
-
 .image {
   position: relative;
 }
 
-.image-title {
-  font-size: 24px;
+.image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.image-caption {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
   margin-top: 10px;
 }
 
-.image-analysis {
-  margin-top: 20px;
+.image-caption h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.image-caption p {
+  font-size: 14px;
 }
 
 /* Estilos da seção de grupo */
