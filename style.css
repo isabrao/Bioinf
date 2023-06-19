@@ -1,12 +1,37 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globais */
 body {
   background-color: #f5f5dc;
   color: black;
   font-family: 'Arial', sans-serif;
 }
 
+h1, h2, h3 {
+  font-family: 'Impact', sans-serif;
+}
+
+a {
+  color: #ff69b4;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos do cabeçalho */
 header {
   background-color: #f5f5dc;
   padding: 20px;
+  text-align: center;
 }
 
 nav ul {
@@ -14,7 +39,7 @@ nav ul {
   justify-content: center;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 20px 0;
 }
 
 nav li {
@@ -29,7 +54,6 @@ nav a {
   text-decoration: none;
   border-radius: 20px;
   transition: background-color 0.3s ease;
-  font-family: 'Arial', sans-serif;
   font-weight: bold;
 }
 
@@ -37,70 +61,86 @@ nav a:hover {
   background-color: #ff6db6;
 }
 
-
-.container {
+/* Estilos da seção de introdução */
+#inicio {
   text-align: center;
-  margin: 40px auto;
+  padding: 40px 0;
 }
 
-.title {
+#inicio h1 {
   font-size: 48px;
-  font-weight: bold;
-  font-family: 'Impact', sans-serif;
-  color: #ff69b4;
+  line-height: 1.2;
   margin-bottom: 20px;
 }
 
-.intro {
-  font-size: 20px;
+#inicio p {
+  font-size: 18px;
   line-height: 1.5;
+  margin-bottom: 40px;
 }
 
-.button {
+#inicio .button {
   display: inline-block;
   padding: 10px 20px;
   background-color: #ff69b4;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 20px;
   transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
-.button:hover {
+#inicio .button:hover {
   background-color: #ff6db6;
 }
 
-h2 {
+/* Estilos da seção de galeria */
+#galeria {
+  text-align: center;
+  padding: 40px 0;
+}
+
+#galeria h2 {
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Estilos da seção do grupo */
+#grupo {
+  text-align: center;
+  padding: 40px 0;
+}
+
+#grupo h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.members {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.gallery img {
-  width: 300px;
-  height: auto;
-  margin: 10px;
-  border-radius: 20px;
-}
-
-.members {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
 .member {
   text-align: center;
+  margin: 20px;
 }
 
 .member img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
@@ -109,10 +149,10 @@ h2 {
   margin: 0;
 }
 
+/* Estilos do rodapé */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #ff69b4;
-  color: white;
-  font-size: 14px;
-}
+  background-color: #f5f5dc;
+  color: #666;
+ 
