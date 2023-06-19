@@ -1,86 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site</title>
   <link rel="stylesheet" href="style.css">
-  <title>Apresentação de Imagens em Nível Celular - Análise Biológica de Dados</title>
 </head>
-
 <body>
   <header>
-    <h1>Apresentação de Imagens em Nível Celular</h1>
-    <h2>Análise Biológica de Dados</h2>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#imagens">Análise das Imagens</a>
+      <a href="#grupo">Grupo</a>
+    </nav>
   </header>
 
-  <section id="inicio">
-    <div class="container">
-      <h2>Introdução</h2>
-      <p>Texto de introdução do trabalho.</p>
-    </div>
-  </section>
+  <div class="container">
+    <section id="inicio">
+      <h2>Início</h2>
+      <p>Conteúdo da seção de início.</p>
+    </section>
 
-  <section id="imagens">
-    <div class="container">
-      <h2>Imagens</h2>
+    <section id="imagens">
+      <h2>Análise das Imagens</h2>
       <div class="gallery">
         <div class="image">
           <img src="imagem1.jpg" alt="Imagem 1">
           <div class="image-caption">
             <h3>Título da Imagem 1</h3>
-            <p>Análise da Imagem 1.</p>
+            <p>Descrição breve da imagem 1.</p>
+            <div class="description">
+              <p class="description-text">Descrição completa da imagem 1.</p>
+              <button class="expand-button">+</button>
+            </div>
           </div>
         </div>
         <div class="image">
           <img src="imagem2.jpg" alt="Imagem 2">
           <div class="image-caption">
             <h3>Título da Imagem 2</h3>
-            <p>Análise da Imagem 2.</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="imagem3.jpg" alt="Imagem 3">
-          <div class="image-caption">
-            <h3>Título da Imagem 3</h3>
-            <p>Análise da Imagem 3.</p>
+            <p>Descrição breve da imagem 2.</p>
+            <div class="description">
+              <p class="description-text">Descrição completa da imagem 2.</p>
+              <button class="expand-button">+</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="grupo">
-    <div class="container">
+    <section id="grupo">
       <h2>Grupo</h2>
       <div class="members">
         <div class="member">
-          <img src="isadora.jpg" alt="Foto do Membro 1">
+          <img src="foto1.jpg" alt="Participante 1">
           <h3>Isadora</h3>
         </div>
         <div class="member">
-          <img src="iris.jpg" alt="Foto do Membro 2">
+          <img src="foto2.jpg" alt="Participante 2">
           <h3>Íris</h3>
         </div>
         <div class="member">
-          <img src="camile.jpg" alt="Foto do Membro 3">
+          <img src="foto3.jpg" alt="Participante 3">
           <h3>Camile</h3>
         </div>
         <div class="member">
-          <img src="livia.jpg" alt="Foto do Membro 4">
+          <img src="foto4.jpg" alt="Participante 4">
           <h3>Livia</h3>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <footer>
-    <div class="container">
-      <p>Todos os direitos reservados.</p>
-    </div>
+    <p>Direitos Reservados &copy; 2023</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
