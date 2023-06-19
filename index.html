@@ -1,75 +1,85 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apresentação de Imagens em Nível Celular | Análise Biológica de Dados</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#imagens e análise">Imagens e Análise</a></li>
-        <li><a href="#grupo">Grupo</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Apresentação de Imagens em Nível Celular Análise Biológica de Dados</h1>
+      <nav>
+        <div class="dropdown">
+          <button class="dropbtn"></button>
+          <div class="dropdown-content">
+            <a href="#inicio">Início</a>
+            <a href="#imagens">Imagens</a>
+            <a href="#grupo">Grupo</a>
+          </div>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="inicio">
-      <div class="container">
-        <h1 class="title">Apresentação de Imagens<br>em Nível Celular</h1>
-        <p class="intro">Bem vindo ao nosso site de análise biológica de dados. Aqui você encontrará imagens e analise de células, utilizando o ImageJ.</p>
-        <a href="#imagens" class="button">Ver Galeria</a>
-      </div>
-    </section>
+  <section id="inicio">
+    <div class="container">
+      <h2>Introdução</h2>
+      <p>Texto de introdução do seu website.</p>
+      <a class="button" href="#imagens">Ver Imagens</a>
+    </div>
+  </section>
 
-    <section id="imagens">
-      <div class="container">
-        <h2>Galeria de Imagens</h2>
-        <div class="gallery">
+  <section id="imagens">
+    <div class="container">
+      <h2>Imagens</h2>
+      <div class="gallery">
+        <div class="image">
           <img src="imagem1.jpg" alt="Imagem 1">
+          <div class="image-details">
+            <h3>Título da Imagem 1</h3>
+            <p>Texto sobre a imagem 1.</p>
+          </div>
+        </div>
+        <div class="image">
           <img src="imagem2.jpg" alt="Imagem 2">
+          <div class="image-details">
+            <h3>Título da Imagem 2</h3>
+            <p>Texto sobre a imagem 2.</p>
+          </div>
+        </div>
+        <div class="image">
           <img src="imagem3.jpg" alt="Imagem 3">
-          <img src="imagem4.jpg" alt="Imagem 4">
+          <div class="image-details">
+            <h3>Título da Imagem 3</h3>
+            <p>Texto sobre a imagem 3.</p>
+          </div>
         </div>
+        <!-- Adicione mais imagens aqui -->
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="grupo">
-      <div class="container">
-        <h2>Grupo</h2>
-        <div class="members">
-          <div class="member">
-            <img src="isadora.jpg" alt="Isadora">
-            <h3>Isadora</h3>
-          </div>
-          <div class="member">
-            <img src="iris.jpg" alt="Íris">
-            <h3>Íris</h3>
-          </div>
-          <div class="member">
-            <img src="camile.jpg" alt="Camile">
-            <h3>Camile</h3>
-          </div>
-          <div class="member">
-            <img src="livia.jpg" alt="Livia">
-            <h3>Livia</h3>
-          </div>
+  <section id="grupo">
+    <div class="container">
+      <h2>Grupo</h2>
+      <div class="members">
+        <div class="member">
+          <img src="isadora.jpg" alt="Isadora">
+          <h3>Isadora</h3>
+        </div>
+        <div class="member">
+          <img src="iris.jpg" alt="Íris">
+          <h3>Íris</h3>
+        </div>
+        <div class="member">
+          <img src="camile.jpg" alt="Camile">
+          <h3>Camile</h3>
+        </div>
+        <div class="member">
+          <img src="livia.jpg" alt="Livia">
+          <h3>Livia</h3>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2023 Apresentação de Imagens em Nível Celular | Análise Biológica de Dados. Imagens obtidas de ImageJ.</p>
+    <div class="container">
+      <p>Todos os direitos reservados. Imagens obtidas do ImageJ.</p>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
-
-</html>
