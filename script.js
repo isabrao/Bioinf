@@ -1,35 +1,10 @@
-<script>
-  // Obtém todas as abas
-  const tabs = document.querySelectorAll('.tab');
-
-  // Obtém todas as seções correspondentes às abas
-  const sections = document.querySelectorAll('section');
-
-  // Adiciona o evento de clique a cada aba
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-      // Remove a classe "active" de todas as abas
-      tabs.forEach(tab => tab.classList.remove('active'));
-
-      // Remove a classe "active" de todas as seções
-      sections.forEach(section => section.classList.remove('active'));
-
-      // Adiciona a classe "active" à aba clicada
-      tab.classList.add('active');
-
-      // Adiciona a classe "active" à seção correspondente
-      sections[index].classList.add('active');
-    });
-  });
-
-  // Obtém todos os botões de expansão
+document.addEventListener('DOMContentLoaded', function() {
   const expandButtons = document.querySelectorAll('.expand-button');
 
-  // Adiciona o evento de clique a cada botão de expansão
-  expandButtons.forEach(button => {
+  expandButtons.forEach(function(button) {
     button.addEventListener('click', function() {
       const description = this.parentNode.querySelector('.description');
-      if (description.style.display === 'none') {
+      if (window.getComputedStyle(description).display === 'none') {
         description.style.display = 'block';
         this.textContent = '-';
       } else {
@@ -38,4 +13,24 @@
       }
     });
   });
-</script>
+
+  const tabs = document.querySelectorAll('.tab');
+  const sections = document.querySelectorAll('section');
+
+  tabs.forEach(function(tab, index) {
+    tab.addEventListener('click', function() {
+      removeActiveClasses();
+      tab.classList.add('active');
+      sections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+      sections[index].style.display = 'block';
+    });
+  });
+
+  function removeActiveClasses() {
+    tabs.forEach(function(tab) {
+      tab.classList.remove('active');
+    });
+  }
+});
