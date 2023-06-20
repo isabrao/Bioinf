@@ -1,16 +1,25 @@
-// Adicionar evento de clique aos botões de expansão
-var expandButtons = document.querySelectorAll('.expand-button');
-expandButtons.forEach(function(button) {
-  button.addEventListener('click', function() {
-    var caption = this.parentNode;
-    caption.classList.toggle('show');
+// script.js
+
+// Função para expandir/recolher a descrição das imagens
+const expandButtons = document.querySelectorAll('.expand-button');
+
+expandButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const description = button.nextElementSibling;
+    description.classList.toggle('show');
+    button.textContent = description.classList.contains('show') ? '-' : '+';
   });
 });
 
-// Adicionar evento de clique ao ícone do menu
-var menuIcon = document.querySelector('.menu-icon');
-var header = document.querySelector('header');
-menuIcon.addEventListener('click', function() {
-  this.classList.toggle('close');
-  header.classList.toggle('menu-open');
+// Função para alternar a classe "active" no menu e rolagem suave para a seção correspondente
+const menuItems = document.querySelectorAll('.menu-icon span');
+const sections = document.querySelectorAll('section');
+
+menuItems.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    menuItems.forEach(item => item.classList.remove('active'));
+    item.classList.add('active');
+    
+    sections[index].scrollIntoView({ behavior: 'smooth' });
+  });
 });
