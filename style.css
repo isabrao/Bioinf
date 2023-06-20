@@ -7,8 +7,8 @@
 .topics-popup {
   display: none;
   position: absolute;
-  background-color: #f9f5e8;
-  color: #000;
+  background-color: #8B4513;
+  color: #fff;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -35,7 +35,7 @@
 }
 
 .image {
-  width: 50%;
+  width: 100%;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -63,6 +63,7 @@
   display: block;
   margin-top: 10px;
   padding: 5px 10px;
+  font-size: 18px;
   background-color: #555;
   color: #fff;
   border: none;
@@ -106,8 +107,45 @@
 
 /* Estilos do rodapé */
 footer {
-  background-color: #555;
+  background-color: #8B4513;
   color: #fff;
   text-align: center;
   padding: 10px;
+}
+
+/* Estilos do popup de tópicos */
+.topics-popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  width: 200px;
+  background-color: #8B4513;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.topics-popup.active {
+  display: block;
+}
+
+.topics-popup ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topics-popup li {
+  margin-bottom: 10px;
+}
+
+.topics-popup a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.topics-popup a:hover {
+  text-decoration: underline;
 }
