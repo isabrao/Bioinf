@@ -1,25 +1,34 @@
-// script.js
-
-// Função para expandir/recolher a descrição das imagens
-const expandButtons = document.querySelectorAll('.expand-button');
-
-expandButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const description = button.nextElementSibling;
-    description.classList.toggle('show');
-    button.textContent = description.classList.contains('show') ? '-' : '+';
+// Função para alternar a exibição da descrição ao clicar no botão de expansão
+function expandDescription() {
+  const expandButtons = document.querySelectorAll('.expand-button');
+  
+  expandButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const description = button.nextElementSibling;
+      description.style.display = description.style.display === 'none' ? 'block' : 'none';
+    });
   });
-});
+}
 
-// Função para alternar a classe "active" no menu e rolagem suave para a seção correspondente
-const menuItems = document.querySelectorAll('.menu-icon span');
-const sections = document.querySelectorAll('section');
-
-menuItems.forEach((item, index) => {
-  item.addEventListener('click', () => {
-    menuItems.forEach(item => item.classList.remove('active'));
-    item.classList.add('active');
-    
-    sections[index].scrollIntoView({ behavior: 'smooth' });
+// Função para rolar para a seção correspondente quando um item do menu é clicado
+function scrollToSection() {
+  const menuItems = document.querySelectorAll('.menu-item');
+  
+  menuItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+      event.preventDefault();
+      const sectionId = item.getAttribute('href');
+      const section = document.querySelector(sectionId);
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth'
+      });
+    });
   });
+}
+
+// Chamada das funções após o carregamento do DOM
+document.addEventListener('DOMContentLoaded', () => {
+  expandDescription();
+  scrollToSection();
 });
