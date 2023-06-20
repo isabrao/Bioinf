@@ -19,7 +19,7 @@ const expandButtons = document.querySelectorAll(".expand-button");
 function expandContent() {
   const imageCaption = this.parentNode;
   const expanded = imageCaption.classList.contains("expanded");
-  
+
   if (expanded) {
     imageCaption.classList.remove("expanded");
   } else {
@@ -34,8 +34,13 @@ expandButtons.forEach((button) => {
 // Alternar exibição dos tópicos de conteúdo ao clicar nas linhas
 const menuIcon = document.querySelector(".menu-icon");
 const menuLines = menuIcon.querySelectorAll("span");
+const menuSections = document.querySelectorAll("section");
 
 function toggleMenu() {
+  menuSections.forEach((section) => {
+    section.classList.toggle("hidden");
+  });
+
   menuLines.forEach((line) => {
     line.classList.toggle("active");
   });
