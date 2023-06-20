@@ -19,7 +19,7 @@ const expandButtons = document.querySelectorAll(".expand-button");
 function expandContent() {
   const imageCaption = this.parentNode;
   const expanded = imageCaption.classList.contains("expanded");
-
+  
   if (expanded) {
     imageCaption.classList.remove("expanded");
   } else {
@@ -31,19 +31,12 @@ expandButtons.forEach((button) => {
   button.addEventListener("click", expandContent);
 });
 
-// Alternar exibição dos tópicos de conteúdo ao clicar nas linhas
+// Alternar exibição dos tópicos de conteúdo ao clicar nos três riscos
 const menuIcon = document.querySelector(".menu-icon");
-const menuLines = menuIcon.querySelectorAll("span");
-const menuSections = document.querySelectorAll("section");
+const topicsPopup = document.querySelector(".topics-popup");
 
-function toggleMenu() {
-  menuSections.forEach((section) => {
-    section.classList.toggle("hidden");
-  });
-
-  menuLines.forEach((line) => {
-    line.classList.toggle("active");
-  });
+function toggleTopicsPopup() {
+  topicsPopup.classList.toggle("active");
 }
 
-menuIcon.addEventListener("click", toggleMenu);
+menuIcon.addEventListener("click", toggleTopicsPopup);
