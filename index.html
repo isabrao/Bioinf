@@ -10,6 +10,26 @@
     .logo {
       display: none;
     }
+    
+    /* Estilos dos tópicos */
+    .topics-popup {
+      display: none;
+      position: absolute;
+      background-color: #f9f5e8;
+      color: #000;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .topics-popup h3 {
+      margin: 0;
+    }
+    
+    .topics-popup p {
+      margin: 0;
+      padding: 5px 0;
+    }
   </style>
 </head>
 <body>
@@ -28,7 +48,7 @@
         <div class="image">
           <img src="imagem1.jpg" alt="Imagem 1">
           <div class="image-caption">
-            <h3>Título da Imagem 1</h3>
+            <h3 class="image-title">Título da Imagem 1</h3>
             <p class="description">Descrição da Imagem 1.</p>
             <button class="expand-button">+</button>
           </div>
@@ -36,7 +56,7 @@
         <div class="image">
           <img src="imagem2.jpg" alt="Imagem 2">
           <div class="image-caption">
-            <h3>Título da Imagem 2</h3>
+            <h3 class="image-title">Título da Imagem 2</h3>
             <p class="description">Descrição da Imagem 2.</p>
             <button class="expand-button">+</button>
           </div>
@@ -44,7 +64,7 @@
         <div class="image">
           <img src="imagem3.jpg" alt="Imagem 3">
           <div class="image-caption">
-            <h3>Título da Imagem 3</h3>
+            <h3 class="image-title">Título da Imagem 3</h3>
             <p class="description">Descrição da Imagem 3.</p>
             <button class="expand-button">+</button>
           </div>
@@ -52,7 +72,7 @@
         <div class="image">
           <img src="imagem4.jpg" alt="Imagem 4">
           <div class="image-caption">
-            <h3>Título da Imagem 4</h3>
+            <h3 class="image-title">Título da Imagem 4</h3>
             <p class="description">Descrição da Imagem 4.</p>
             <button class="expand-button">+</button>
           </div>
@@ -86,6 +106,14 @@
   <footer>
     <p>© 2023 Imagens em Nível Celular | Análise Biológica de Dados. Todos os direitos reservados.</p>
   </footer>
+
+  <div class="topics-popup">
+    <h3>Tópicos</h3>
+    <p>Início</p>
+    <p>Imagens</p>
+    <p>Análise (Descrição da imagem)</p>
+    <p>Grupo</p>
+  </div>
 
   <script src="script.js"></script>
 </body>
