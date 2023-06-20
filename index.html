@@ -1,56 +1,113 @@
+User
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imagens em Nível Celular e Análise Biológica de Dados</title>
+  <title>Imagens em Nível Celular & Análise Biológica de Dados</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos do logo */
+    .logo {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Estilos dos traços */
+    .menu-icon {
+      width: 30px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .menu-icon span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: #000;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .menu-icon span:nth-child(1) {
+      top: 0;
+    }
+
+    .menu-icon span:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .menu-icon span:nth-child(3) {
+      bottom: 0;
+    }
+
+    /* Estilos do ícone de fechar */
+    .menu-icon.close span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 50%;
+    }
+
+    .menu-icon.close span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-icon.close span:nth-child(3) {
+      transform: rotate(-45deg);
+      bottom: 50%;
+    }
+  </style>
 </head>
 <body>
   <header>
+    <img class="logo" src="caminho/para/o/logo.png" alt="Logo">
     <div class="menu-icon">
       <span></span>
       <span></span>
       <span></span>
     </div>
-    <h1>Imagens em Nível Celular e Análise Biológica de Dados</h1>
-    <p class="section-description">Descrição sobre o conteúdo da página...</p>
-    <div class="logo">
-      <img src="microscopio.png" alt="Logo">
-    </div>
-    <div class="lines"></div>
-    <div class="topics-menu">
-      <span class="topic-line"></span>
-      <span class="topic-line"></span>
-      <div class="topics-popup">
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#imagens">Análise das Imagens</a></li>
-          <li><a href="#grupo">Grupo</a></li>
-        </ul>
-      </div>
-    </div>
   </header>
 
   <div class="container">
+    <section id="inicio">
+      <h2>Seção de Início</h2>
+      <p>Conteúdo da seção de início.</p>
+    </section>
+
     <section id="imagens">
       <h2>Análise das Imagens</h2>
-      <hr class="section-line">
       <div class="gallery">
         <div class="image">
           <img src="imagem1.jpg" alt="Imagem 1">
           <div class="image-caption">
-            <h3 class="image-title">Título da Imagem 1</h3>
-            <img class="expand-button" src="X" alt="Expandir">
+            <h3>Título da Imagem 1</h3>
             <p class="description">Descrição da Imagem 1.</p>
+            <button class="expand-button">+</button>
           </div>
         </div>
         <div class="image">
           <img src="imagem2.jpg" alt="Imagem 2">
           <div class="image-caption">
-            <h3 class="image-title">Título da Imagem 2</h3>
-            <img class="expand-button" src="X" alt="Expandir">
+            <h3>Título da Imagem 2</h3>
             <p class="description">Descrição da Imagem 2.</p>
+            <button class="expand-button">+</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="imagem3.jpg" alt="Imagem 3">
+          <div class="image-caption">
+            <h3>Título da Imagem 3</h3>
+            <p class="description">Descrição da Imagem 3.</p>
+            <button class="expand-button">+</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="imagem4.jpg" alt="Imagem 4">
+          <div class="image-caption">
+            <h3>Título da Imagem 4</h3>
+            <p class="description">Descrição da Imagem 4.</p>
+            <button class="expand-button">+</button>
           </div>
         </div>
       </div>
@@ -58,8 +115,6 @@
 
     <section id="grupo">
       <h2>Grupo</h2>
-      <hr class="section-line">
-      <p class="section-description">Descrição sobre o conteúdo da página...</p>
       <div class="members">
         <div class="member">
           <img src="isadora.jpg" alt="Isadora">
@@ -88,3 +143,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
