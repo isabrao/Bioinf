@@ -31,27 +31,12 @@ expandButtons.forEach((button) => {
   button.addEventListener("click", expandContent);
 });
 
-// Alternar exibição dos tópicos de conteúdo ao clicar nos três riscos
+// Alternar exibição dos tópicos de conteúdo ao clicar nas duas linhas
 const menuIcon = document.querySelector(".menu-icon");
 const topicsPopup = document.querySelector(".topics-popup");
-const topicLinks = document.querySelectorAll(".topics-popup li");
 
 function toggleTopicsPopup() {
   topicsPopup.classList.toggle("active");
 }
 
-function scrollToSection(e) {
-  e.preventDefault();
-  const targetSectionId = this.dataset.target;
-  const targetSection = document.querySelector(targetSectionId);
-  
-  if (targetSection) {
-    topicsPopup.classList.remove("active");
-    targetSection.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
 menuIcon.addEventListener("click", toggleTopicsPopup);
-topicLinks.forEach((link) => {
-  link.addEventListener("click", scrollToSection);
-});
