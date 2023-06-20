@@ -1,44 +1,44 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const expandButtons = document.querySelectorAll('.expand-button');
+// Animação das seções ao rolar para baixo
+const sections = document.querySelectorAll("section");
+const windowHeight = window.innerHeight;
 
-  expandButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      const description = this.parentNode.querySelector('.description');
-      if (window.getComputedStyle(description).display === 'none') {
-        description.style.display = 'block';
-        this.textContent = '-';
-      } else {
-        description.style.display = 'none';
-        this.textContent = '+';
-      }
-    });
+function animateSections() {
+  sections.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if (sectionTop < windowHeight) {
+      section.classList.add("animate-slide-up");
+    }
   });
+}
 
-  const tabs = document.querySelectorAll('.tab');
-  const sections = document.querySelectorAll('section');
+window.addEventListener("scroll", animateSections);
 
-  tabs.forEach(function(tab, index) {
-    tab.addEventListener('click', function() {
-      removeActiveClasses();
-      tab.classList.add('active');
-      sections.forEach(function(section) {
-        section.style.display = 'none';
-      });
-      sections[index].style.display = 'block';
-    });
-  });
+// Revelar conteúdo ao clicar no botão
+const expandButtons = document.querySelectorAll(".expand-button");
 
-  function removeActiveClasses() {
-    tabs.forEach(function(tab) {
-      tab.classList.remove('active');
-    });
+function expandContent() {
+  const imageCaption = this.parentNode;
+  const expanded = imageCaption.classList.contains("expanded");
+  
+  if (expanded) {
+    imageCaption.classList.remove("expanded");
+  } else {
+    imageCaption.classList.add("expanded");
   }
-});
-const menuIcon = document.querySelector('.menu-icon');
-const menuItems = document.querySelector('.menu-items');
+}
 
-menuIcon.addEventListener('click', () => {
-  menuIcon.classList.toggle('close');
-  menuItems.classList.toggle('show');
+expandButtons.forEach((button) => {
+  button.addEventListener("click", expandContent);
 });
 
+// Alternar exibição dos tópicos de conteúdo ao clicar nas linhas
+const menuIcon = document.querySelector(".menu-icon");
+const menuLines = menuIcon.querySelectorAll("span");
+
+function toggleMenu() {
+  menuLines.forEach((line) => {
+    line.classList.toggle("active");
+  });
+}
+
+menuIcon.addEventListener("click", toggleMenu);
