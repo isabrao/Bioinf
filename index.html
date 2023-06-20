@@ -5,32 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imagens em Nível Celular & Análise Biológica de Dados</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Estilos do logo */
-    .logo {
-      display: none;
-    }
-    
-    /* Estilos dos tópicos */
-    .topics-popup {
-      display: none;
-      position: absolute;
-      background-color: #f9f5e8;
-      color: #000;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    
-    .topics-popup h3 {
-      margin: 0;
-    }
-    
-    .topics-popup p {
-      margin: 0;
-      padding: 5px 0;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -39,6 +13,11 @@
       <span></span>
       <span></span>
     </div>
+    <h1>Meu Site</h1>
+    <div class="logo">
+      <img src="microscopio.png" alt="Logo">
+    </div>
+    <div class="lines"></div>
   </header>
 
   <div class="container">
@@ -58,22 +37,6 @@
           <div class="image-caption">
             <h3 class="image-title">Título da Imagem 2</h3>
             <p class="description">Descrição da Imagem 2.</p>
-            <button class="expand-button">+</button>
-          </div>
-        </div>
-        <div class="image">
-          <img src="imagem3.jpg" alt="Imagem 3">
-          <div class="image-caption">
-            <h3 class="image-title">Título da Imagem 3</h3>
-            <p class="description">Descrição da Imagem 3.</p>
-            <button class="expand-button">+</button>
-          </div>
-        </div>
-        <div class="image">
-          <img src="imagem4.jpg" alt="Imagem 4">
-          <div class="image-caption">
-            <h3 class="image-title">Título da Imagem 4</h3>
-            <p class="description">Descrição da Imagem 4.</p>
             <button class="expand-button">+</button>
           </div>
         </div>
@@ -109,10 +72,11 @@
 
   <div class="topics-popup">
     <h3>Tópicos</h3>
-    <p>Início</p>
-    <p>Imagens</p>
-    <p>Análise (Descrição da imagem)</p>
-    <p>Grupo</p>
+    <ul>
+      <li>Início</li>
+      <li>Análise de Imagem</li>
+      <li>Grupo</li>
+    </ul>
   </div>
 
   <script src="script.js"></script>
