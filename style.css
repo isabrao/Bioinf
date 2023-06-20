@@ -1,7 +1,7 @@
-/* Estilos gerais */
+/* Estilo geral */
 body {
-  background-color: #f5f0e1; /* Cor de fundo creme */
-  color: #000000; /* Cor da fonte preta */
+  background-color: #f6ecd8;
+  color: #000;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -13,68 +13,83 @@ body {
   padding: 20px;
 }
 
-/* Estilos do menu */
+/* Cabeçalho */
 header {
-  background-color: #000000; /* Cor de fundo preta */
-  color: #ffffff; /* Cor da fonte branca */
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
 }
 
 .menu-icon {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
+  width: 30px;
+  height: 20px;
 }
 
 .menu-icon span {
-  width: 30px;
-  height: 4px;
-  background-color: #ffffff; /* Cor da fonte branca */
-  margin-bottom: 5px;
-}
-
-.logo {
-  margin-left: 20px;
+  background-color: #fff;
+  height: 2px;
 }
 
 h1 {
   text-align: center;
   margin: 0;
+  flex-grow: 1;
+}
+
+.logo img {
+  max-width: 100px;
 }
 
 .lines {
+  width: 20px;
   height: 2px;
-  background-color: #ffffff; /* Cor da fonte branca */
+  background-color: #fff;
+  margin: 10px auto;
+}
+
+/* Tópicos do menu */
+.topics-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 
-.topics-menu {
-  position: relative;
-}
-
 .topic-line {
-  width: 25px;
+  width: 30px;
   height: 2px;
-  background-color: #ffffff; /* Cor da fonte branca */
-  margin-bottom: 5px;
+  background-color: #000;
+  margin: 2px;
+  cursor: pointer;
 }
 
+/* Pop-up de tópicos */
 .topics-popup {
-  position: absolute;
-  top: 30px;
-  left: -100px;
-  background-color: #8b4513; /* Cor de fundo marrom */
-  color: #ffffff; /* Cor da fonte branca */
-  padding: 10px;
+  background-color: #b0734f;
+  color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
   border-radius: 5px;
+  z-index: 999;
   display: none;
 }
 
 .topics-popup.active {
   display: block;
+}
+
+.topics-popup h3 {
+  margin: 0 0 10px 0;
+  text-align: center;
 }
 
 .topics-popup ul {
@@ -84,75 +99,45 @@ h1 {
 }
 
 .topics-popup li {
+  cursor: pointer;
+}
+
+/* Seção de grupo */
+#grupo {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.member {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 10px;
 }
 
-/* Estilos das seções */
-section {
-  margin-bottom: 40px;
+.member h3 {
+  margin: 0;
 }
 
-h2 {
-  text-align: center;
-}
-
-.section-line {
-  height: 2px;
-  background-color: #000000; /* Cor da fonte preta */
-  margin-bottom: 20px;
-}
-
-.section-description {
-  text-align: center;
-}
-
-/* Estilos das imagens */
-.gallery {
-  display: flex;
-  justify-content: center;
-}
-
-.image {
-  margin: 0 10px;
-  text-align: center;
-}
-
-.image img {
-  max-width: 100%;
-  height: auto;
-}
-
-.image-caption {
-  margin-top: 10px;
-}
-
-.image-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.expand-button {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  margin: 0 auto;
-  display: block;
-}
-
-.description {
-  display: none;
-}
-
-.expanded .description {
-  display: block;
-}
-
-/* Estilos do rodapé */
+/* Rodapé */
 footer {
-  background-color: #8b4513; /* Cor de fundo marrom */
-  color: #ffffff; /* Cor da fonte branca */
-  text-align: center;
+  background-color: #b0734f;
+  color: #fff;
   padding: 20px;
-  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
 }
