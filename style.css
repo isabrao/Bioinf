@@ -1,130 +1,76 @@
-/* Estilos do logo */
-.logo {
-  display: none;
-}
-
-/* Estilos dos tópicos */
-.topics-popup {
-  display: none;
-  position: absolute;
-  background-color: #f9f5e8;
-  color: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.topics-popup h3 {
+/* Estilos gerais */
+body {
+  background-color: #f5f0e1; /* Cor de fundo creme */
+  color: #000000; /* Cor da fonte preta */
+  font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
 }
 
-.topics-popup p {
-  margin: 0;
-  padding: 5px 0;
-}
-
-/* Estilos da seção de imagens */
-#imagens {
-  background-color: #f9f5e8;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-.gallery {
+/* Estilos do menu */
+header {
+  background-color: #000000; /* Cor de fundo preta */
+  color: #ffffff; /* Cor da fonte branca */
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-.image {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.image-caption {
-  padding: 10px;
-  background-color: #fff;
-}
-
-.image-caption h3 {
-  margin: 0;
-}
-
-.image-caption p {
-  margin: 5px 0;
-}
-
-.expand-button {
-  display: block;
-  margin-top: 10px;
-  padding: 5px 10px;
-  font-size: 18px;
-  background-color: #555;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+.menu-icon {
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
 }
 
-.expanded .expand-button {
-  background-color: #999;
+.menu-icon span {
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff; /* Cor da fonte branca */
+  margin-bottom: 5px;
 }
 
-/* Estilos da seção de grupo */
-#grupo {
-  background-color: #f9f5e8;
-  padding: 20px;
+.logo {
+  margin-left: 20px;
 }
 
-.members {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.member {
-  width: 25%;
-  padding: 10px;
-  box-sizing: border-box;
+h1 {
   text-align: center;
-}
-
-.member img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.member h3 {
   margin: 0;
 }
 
-/* Estilos do rodapé */
-footer {
-  background-color: #8B4513;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
+.lines {
+  height: 2px;
+  background-color: #ffffff; /* Cor da fonte branca */
+  margin-top: 20px;
 }
 
-/* Estilos do popup de tópicos */
+.topics-menu {
+  position: relative;
+}
+
+.topic-line {
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff; /* Cor da fonte branca */
+  margin-bottom: 5px;
+}
+
 .topics-popup {
-  display: none;
-  position: fixed;
-  top: 50px;
-  right: 10px;
-  width: 200px;
-  background-color: #f9f5e8;
-  color: #fff;
+  position: absolute;
+  top: 30px;
+  left: -100px;
+  background-color: #8b4513; /* Cor de fundo marrom */
+  color: #ffffff; /* Cor da fonte branca */
   padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: none;
 }
 
 .topics-popup.active {
@@ -132,7 +78,7 @@ footer {
 }
 
 .topics-popup ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -141,11 +87,72 @@ footer {
   margin-bottom: 10px;
 }
 
-.topics-popup a {
-  color: #fff;
-  text-decoration: none;
+/* Estilos das seções */
+section {
+  margin-bottom: 40px;
 }
 
-.topics-popup a:hover {
-  text-decoration: underline;
+h2 {
+  text-align: center;
+}
+
+.section-line {
+  height: 2px;
+  background-color: #000000; /* Cor da fonte preta */
+  margin-bottom: 20px;
+}
+
+.section-description {
+  text-align: center;
+}
+
+/* Estilos das imagens */
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  margin: 0 10px;
+  text-align: center;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-caption {
+  margin-top: 10px;
+}
+
+.image-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.expand-button {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
+
+.description {
+  display: none;
+}
+
+.expanded .description {
+  display: block;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #8b4513; /* Cor de fundo marrom */
+  color: #ffffff; /* Cor da fonte branca */
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
